@@ -1,27 +1,27 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
-import Home from './Home';
-import Projects from './Projects';
-import PythonSortingSystem from './PythonSortingSystem';
-import CSharpMushroomPocket from './CSharpMushroomPocket';
-import Ecoutopia from './Ecoutopia';
+import { Router, Routes, Route, Link } from 'react-router-dom';
+import About from './components/About';
+import Projects from './components/Projects';
+import PythonSortingSystem from './components/PythonSortingSystem';
+import CSharpMushroomPocket from './components/CSharpMushroomPocket';
+import Ecoutopia from './components/Ecoutopia';
 
 const App = () => (
   <Router>
     <div>
       <nav>
         <ul>
-          <li><Link to="/">Home</Link></li>
+          <li><Link to="/">About</Link></li>
           <li><Link to="/projects">Projects</Link></li>
         </ul>
       </nav>
-      <Switch>
-        <Route path="/" exact component={Home} />
-        <Route path="/projects" exact component={Projects} />
+      <Routes>
+        <Route path="/" component={About} />
+        <Route path="/projects" component={Projects} />
         <Route path="/projects/python-sorting-system" component={PythonSortingSystem} />
         <Route path="/projects/csharp-mushroom-pocket" component={CSharpMushroomPocket} />
         <Route path="/projects/ecoutopia" component={Ecoutopia} />
-      </Switch>
+      </Routes>
     </div>
   </Router>
 );
