@@ -32,7 +32,7 @@ const About = () => (
   </section>
 );
 
-// Inline styles
+// Updated styles for a cleaner look
 const sectionStyle = {
   padding: '2rem',
   backgroundColor: '#f9f9f9',
@@ -40,11 +40,13 @@ const sectionStyle = {
   boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
   marginBottom: '2rem',
   textAlign: 'center',
+  fontFamily: 'Arial, sans-serif', // Updated font
 };
 
 const headingStyle = {
   fontSize: '2.5rem',
   color: '#333',
+  marginBottom: '1rem', // Improved spacing
 };
 
 const subHeadingStyle = {
@@ -72,3 +74,5 @@ const linkStyle = {
 };
 
 export default About;
+
+
